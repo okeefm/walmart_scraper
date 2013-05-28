@@ -26,7 +26,7 @@ emails = ["mikeco57@gmail.com", "okeefm57@gmail.com"]
 products = ["21556265", "17128628", "16783170", "16783169", "17175595", "17133655", "17474538", "21638833", "16930265", "16930246", "22027232", "17617401", "21694972", "17128629", "16930262", "16817298", "22027233", "21556238", "17757334"]
 
 #zip codes
-zips = {"mikeco57@gmail.com" => "12180", "okeefm57@gmail.com" => "03051"}
+zips = {"mikeco57@gmail.com" => "12180", "okeefm57@gmail.com" => "03051", "mdokeefe57@gmail.com" =>"03051"}
 
 #time settings
 time = Time.new
