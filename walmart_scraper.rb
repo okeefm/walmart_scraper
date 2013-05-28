@@ -53,7 +53,14 @@ emails.each do |email|
 		item = page.css("div.title").first.text
 		#puts page
 		instockstores = []
-		stores.each do |store|
+		if email != "okeefm57@gmail.com"
+			stores.each do |store|
+				if store.css("tr td").first.text == "In stock"
+					instockstores.push(store.css("td.name span").text + " (" + store.css("td[colspan='2']").first.text + ")")
+				end
+			end
+		else
+			store = stores.first
 			if store.css("tr td").first.text == "In stock"
 				instockstores.push(store.css("td.name span").text + " (" + store.css("td[colspan='2']").first.text + ")")
 			end
