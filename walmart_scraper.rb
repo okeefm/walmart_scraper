@@ -26,7 +26,7 @@ emails = ["mikeco57@gmail.com", "okeefm57@gmail.com"]
 products = ["21556265", "17128628", "16783170", "16783169", "17175595", "17133655", "17474538", "21638833", "16930265", "16930246", "22027232", "17617401", "21694972", "17128629", "16930262", "16817298", "22027233", "21556238", "17757334"]
 
 #zip codes
-zips = {"mikeco57@gmail.com" => "12180", "okeefm57@gmail.com" => "03051"}
+zips = {"mikeco57@gmail.com" => "12180", "okeefm57@gmail.com" => "03051", "mdokeefe57@gmail.com" =>"03051"}
 
 #time settings
 time = Time.new
@@ -41,9 +41,8 @@ old_stock = if File.exists?('/home/okeefm/code/walmart_scraper/stock_settings.tx
 stock = Hash.new
 
 
-emails.each do |email|
+zips.each do |email, zip|
 	customer_details = Hash.new
-	zip = zips[email]
 	products.each do |product|
 		#grab the page as Nokogiri HTML
 		page = Nokogiri::HTML(open("http://mobile.walmart.com/m/searchfindinstoreresults?product_id=" + product + "&zip=" + zip, "User-Agent" => "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.22 (KHTML, like Gecko) Ubuntu Chromium/25.0.1364.160 Chrome/25.0.1364.160 Safari/537.22"))
@@ -53,7 +52,7 @@ emails.each do |email|
 		item = page.css("div.title").first.text
 		#puts page
 		instockstores = []
-		if email == "okeefm57@gmail.com"
+		if email == "mdokeefe57@gmail.com"
 			store = stores.first
 			if store.css("tr td").first.text == "In stock"
 				instockstores.push(store.css("td.name span").text + " (" + store.css("td[colspan='2']").first.text + ")")
