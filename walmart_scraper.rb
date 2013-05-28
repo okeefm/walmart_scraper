@@ -31,7 +31,7 @@ zips = {"mikeco57@gmail.com" => "12180", "okeefm57@gmail.com" => "03051", "mdoke
 #time settings
 time = Time.new
 
-old_stock = if File.exists?('/home/okeefm/code/walmart_scraper/stock_settings.txt')
+old_stock = if File.exists?('/home/okeefm/code/walmart_scraper/stock_settings.txt') and !File.empty?('/home/okeefm/code/walmart_scraper/stock_settings.txt')
 		File.open('/home/okeefm/code/walmart_scraper/stock_settings.txt') do |file|
 			Marshal.load(file)
 		end
