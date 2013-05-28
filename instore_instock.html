@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!-- saved from url=(0111)http://mobile.walmart.com/m/searchfindinstoreresults?product_id=21556265&lat=0.0&lon=0.0&zip=12180&city=&state= -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="http://mobile.walmart.com/r/images/icon.png" rel="apple-touch-icon">
+<style type="text/css">
+@import "/r/stylesheets/walmart.css";
+</style>
+<style type="text/css">
+#globalHeader {
+position: fixed;
+bottom: 0px;
+}
+</style>
+
+<script type="text/javascript" src="./instore_instock_files/walmart.js"></script><style type="text/css"></style>
+<script type="text/javascript" src="./instore_instock_files/jquery-1.4.2.min.js"></script>
+
+<meta name="viewport" content="width = device-width, user-scalable=no minimum-scale=1.0 maximum-scale=1.0">
+<meta name="apple-touch-fullscreen" content="YES">
+<script type="text/javascript"><!--/*--><![CDATA[/*><!--*/
+var defaultSearchTerm = "";
+/*-->]]>*/</script>
+
+<script type="text/javascript" src="./instore_instock_files/wicket-event.js"></script>
+<script type="text/javascript"><!--/*--><![CDATA[/*><!--*/
+Wicket.Event.add(window, "load", function(event) { getFirstCachedResults();});
+/*-->]]>*/</script>
+
+</head>
+<body style="min-width:320px; min-height:320px;" class=" hasGoogleVoiceExt">
+<div class="legacy">
+<div>
+
+</div>
+<div id="headerLogoPanel" class="header">
+<div>
+<a href="http://mobile.walmart.com/m/home?host=ns31&"><div class="walmartLogo">Walmart</div></a>
+<span class="right">
+<span class="headerIcons searchIcon" id="searchToggleIcon" onclick="toggleSearchSubHeader();">
+</span>
+<span class="headerIcons storeIcon" onclick="loadLocationWithGPS(&#39;storefinderresults?&#39;); return false;" href="#">
+</span>
+<span>
+<div style="display:inline-block;">
+<span class="headerIcons cartIcon" onclick="var win = this.ownerDocument.defaultView || this.ownerDocument.parentWindow; if (win == window) { window.location.href=&#39;cart&#39;; } ;return false">
+</span>
+</div>
+</span>
+</span>
+</div>
+</div>
+<div id="headerSearchPanel" style="padding-left:10px; background-color:#0251b7;display: none;">
+<form id="id1" style="padding: 0px; margin: 0px;" method="get" action="http://mobile.walmart.com/m/searchfindinstoreresults"><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden"><input type="hidden" name="pageHeader_headerSearchPanel_searchForm_hf_0" id="pageHeader_headerSearchPanel_searchForm_hf_0"><input type="hidden" name="product_id" value="21556265"><input type="hidden" name="zip" value="12180"><input type="hidden" name="city" value=""><input type="hidden" name="state" value=""><input type="hidden" name="lat" value="0.0"><input type="hidden" name="lon" value="0.0"><input type="hidden" name="wicket:interface" value=":0:pageHeader:headerSearchPanel:searchForm::IFormSubmitListener::"></div>
+<table width="100%" cellspacing="0" cellpadding="0" align="center" style="padding-bottom:5px;">
+<tbody><tr>
+<td class="searchbar" style="background-color:#0251b7;">
+<div style="-moz-border-radius: 24px;-webkit-border-radius: 24px;overflow: hidden;height:25px; padding-top:1px; background: #0251b7 url(&#39;/r/images/search_bar_background.png&#39;) left top repeat-x;">
+<input class="inputField" name="query" autocomplete="off" placeholder="What can we help you find?" onclick="javascript:if(this.value==&#39;Search&#39;){this.value=&#39;&#39;;}; wm.mobile.search.init();" onkeyup="wm.mobile.search.searchOn(this.value);" type="text" value="" style="border-style:none; border-width:0px; font-size:11px; padding-top: 0;height:25px; background:white;" id="query">
+</div>
+<div style="height:4px; margin-bottom:-10px; width:100%; background:#0251b7;"></div>
+<input type="hidden" name="department" id="department" value="">
+<div id="searchHeader" style="display: none" onclick="" class="searchHeader2"></div>
+</td>
+<td class="searchbargo">
+<input style="border: 0px;margin-left: -25px;height:27px; background: #0251b7;" src="./instore_instock_files/BTN_search.png" type="image" value="Go">
+</td>
+</tr>
+</tbody></table>
+</form>
+<div id="searchoverlay" class="overlay" type="hidden" style="display: none">
+<ul class="search_suggestions" id="suggestions"></ul>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+var $query = $("#query");
+$query.live("blur",function(){
+var queryValue = $query.val();
+if(queryValue == null || queryValue == '' || queryValue == "defaultSearchTerm") {
+wm.mobile.search.hideSuggestions();
+}
+if($query.val() == "") {
+$query.val(defaultSearchTerm);
+}
+});
+$query.live("focus",function(){
+/*
+NOTE the variable defaultSearchTerm is set in the
+JavascriptTextTemplate SearchPanel.js
+*/
+if($query.val() == defaultSearchTerm) {
+$query.val("");
+}
+});
+$(".searchHeader2").live("click",function(){
+wm.mobile.search.hideSuggestions();
+});
+if($('.refineSelect').is(':disabled')== true)
+{
+$('.greyText').css("display","inline");
+}
+else if($('.refineSelect').is(':disabled')== false)
+{
+$('.greyText').css("display","none");
+}
+});
+</script>
+</div>
+<div class="titlePanel">
+<div style="position:absolute; right:3px; top:4px;"></div>
+<div class="crumbsTitle">
+<div id="crumbsCookie" style="display:none">crumbs=Y29tLndtLm1vYmlsZS53ZWIuc2VhcmNoLlNoZWxmU2VhcmNoUmVzdWx0fFNlYXJjaCtSZXN1bHRzfHNlYXJjaF9xdWVyeT0uMjJ8fGNvbS53bS5tb2JpbGUud2ViLml0ZW0uSXRlbVBhZ2V8UHJvZHVjdCtEZXRhaWxzfHByb2R1Y3RfaWQ9MjE1NTYyNjV8fGNvbS53bS5tb2JpbGUud2ViLmZpbmRpbnN0b3JlLlNlYXJjaEZpbmRJblN0b3JlfEZpbmQraW4rU3RvcmUrU2VhcmNofHByb2R1Y3RfaWQ9MjE1NTYyNjV8fGNvbS53bS5tb2JpbGUud2ViLmZpbmRpbnN0b3JlLlNlYXJjaEZpbmRJblN0b3JlUmVzdWx0c3xGaW5kK2luK1N0b3JlK1Jlc3VsdHN8bG9uPTAuMHx8Y29tLndtLm1vYmlsZS53ZWIuZmluZGluc3RvcmUuU2VhcmNoRmluZEluU3RvcmVSZXN1bHRzfEZpbmQraW4rU3RvcmUrUmVzdWx0c3xwcm9kdWN0X2lkPTIxNTU2MjY1fHppcD0xMjE4MHxjaXR5PXxzdGF0ZT18bGF0PTAuMHxsb249MC4wfHw; domain=.walmart.com; path=/; max-age=315360000</div>
+<script type="text/javascript">
+var cookie = document.getElementById("crumbsCookie");
+document.cookie = cookie.innerText;
+</script>
+<span>
+<a style="text-decoration:none;" href="http://mobile.walmart.com/m/searchr?search_query=.22">
+<span>Search Results</span>
+</a>&nbsp;:&nbsp;
+</span>
+<a style="text-decoration:none;" href="http://mobile.walmart.com/m/searchfindinstoreresults?lon=0.0">
+<span>Find in Store Results</span>
+</a>
+
+</div>
+</div>
+</div>
+<div id="innerPage" style="padding-bottom: 50px;">
+
+
+<div class="container_nopadding">
+<div class="fis">
+<img border="0" class="midpic" src="./instore_instock_files/0007668300953_215X215.jpg" alt="Item Image">
+</div>
+<div class="title" style="padding: 15px 10px 0px; 10px;">CCI 22 LR Tactical Bullets, 375-Count</div>
+<div class="fis">To locate this item, show this number to a department associate.</div>
+<div class="fis" style="padding-top: 20px;"> UPC: <span style="font-weight:bold;">0007668300953</span>
+</div>
+<div class="title" style="padding: 15px 10px 0px; 10px;">Search Results</div>
+
+<div style="padding: 10px;">
+We found <span>4</span> <span>stores</span> that carry this item within <span>50</span> miles of <span>12180</span>.
+</div>
+<div style="border-top: 1px solid #CCCCCC;"><div style="border-bottom: 1px solid #CCCCCC; padding-left: 10px; padding-top: 15px; padding-bottom: 10px;">
+<table class="store" cellspacing="0">
+<tbody><tr>
+<td style="font-weight: bold; font-size: .92em; color: #F77B21;">Out of stock</td>
+</tr>
+<tr>
+<td class="name">
+<a href="http://mobile.walmart.com/m/searchfindinstoreresults?wicket:bookmarkablePage=:com.wm.mobile.web.finder.FSearchStoreServicesDetails&product_id=21556265&zip=12180&city=&state=&lat=0.0&lon=0.0&store_id=3583"><span>Glenmont #3583</span></a></td>
+</tr>
+<tr>
+<td colspan="2">311 Route 9W</td>
+</tr>
+<tr>
+<td><span>Glenmont</span>, <span>NY</span>, <span>12077</span>
+</td>
+</tr>
+<tr>
+<td class="phone"><a href="tel:5184326120">(518) 432-6120</a></td>
+</tr>
+<tr>
+<td><a href="http://mobile.walmart.com/m/searchfindinstoreresults?wicket:bookmarkablePage=:com.wm.mobile.web.utils.GetDirectionsLink&address=311+Route+9W,Glenmont,NY,12077&latitude=0.0&longitude=0.0">Directions</a>
+</td>
+</tr>
+<tr>
+<td>
+
+</td>
+</tr>
+</tbody></table>
+</div><div style="border-bottom: 1px solid #CCCCCC; padding-left: 10px; padding-top: 15px; padding-bottom: 10px;">
+<table class="store" cellspacing="0">
+<tbody><tr>
+<td style="font-weight: bold; font-size: .92em; color: #F77B21;">Out of stock</td>
+</tr>
+<tr>
+<td class="name">
+<a href="http://mobile.walmart.com/m/searchfindinstoreresults?wicket:bookmarkablePage=:com.wm.mobile.web.finder.FSearchStoreServicesDetails&product_id=21556265&zip=12180&city=&state=&lat=0.0&lon=0.0&store_id=2056"><span>Saratoga Springs #2056</span></a></td>
+</tr>
+<tr>
+<td colspan="2">16 Old Gick Rd</td>
+</tr>
+<tr>
+<td><span>Saratoga Springs</span>, <span>NY</span>, <span>12866</span>
+</td>
+</tr>
+<tr>
+<td class="phone"><a href="tel:5185818035">(518) 581-8035</a></td>
+</tr>
+<tr>
+<td><a href="http://mobile.walmart.com/m/searchfindinstoreresults?wicket:bookmarkablePage=:com.wm.mobile.web.utils.GetDirectionsLink&address=16+Old+Gick+Rd,Saratoga+Springs,NY,12866&latitude=0.0&longitude=0.0">Directions</a>
+</td>
+</tr>
+<tr>
+<td>
+
+</td>
+</tr>
+</tbody></table>
+</div><div style="border-bottom: 1px solid #CCCCCC; padding-left: 10px; padding-top: 15px; padding-bottom: 10px;">
+<table class="store" cellspacing="0">
+<tbody><tr>
+<td style="font-weight: bold; font-size: .92em; color: #F77B21;">Out of stock</td>
+</tr>
+<tr>
+<td class="name">
+<a href="http://mobile.walmart.com/m/searchfindinstoreresults?wicket:bookmarkablePage=:com.wm.mobile.web.finder.FSearchStoreServicesDetails&product_id=21556265&zip=12180&city=&state=&lat=0.0&lon=0.0&store_id=2289"><span>Bennington #2289</span></a></td>
+</tr>
+<tr>
+<td colspan="2">210 Northside Dr</td>
+</tr>
+<tr>
+<td><span>Bennington</span>, <span>VT</span>, <span>05201</span>
+</td>
+</tr>
+<tr>
+<td class="phone"><a href="tel:8024471614">(802) 447-1614</a></td>
+</tr>
+<tr>
+<td><a href="http://mobile.walmart.com/m/searchfindinstoreresults?wicket:bookmarkablePage=:com.wm.mobile.web.utils.GetDirectionsLink&address=210+Northside+Dr,Bennington,VT,05201&latitude=0.0&longitude=0.0">Directions</a>
+</td>
+</tr>
+<tr>
+<td>
+
+</td>
+</tr>
+</tbody></table>
+</div><div style="border-bottom: 1px solid #CCCCCC; padding-left: 10px; padding-top: 15px; padding-bottom: 10px;">
+<table class="store" cellspacing="0">
+<tbody><tr>
+<td style="font-weight: bold; font-size: .92em; color: #F77B21;">In stock</td>
+</tr>
+<tr>
+<td class="name">
+<a href="http://mobile.walmart.com/m/searchfindinstoreresults?wicket:bookmarkablePage=:com.wm.mobile.web.finder.FSearchStoreServicesDetails&product_id=21556265&zip=12180&city=&state=&lat=0.0&lon=0.0&store_id=1984"><span>North Adams #1984</span></a></td>
+</tr>
+<tr>
+<td colspan="2">830 Curran Hwy Tba 1984</td>
+</tr>
+<tr>
+<td><span>North Adams</span>, <span>MA</span>, <span>01247</span>
+</td>
+</tr>
+<tr>
+<td class="phone"><a href="tel:4136644004">(413) 664-4004</a></td>
+</tr>
+<tr>
+<td><a href="http://mobile.walmart.com/m/searchfindinstoreresults?wicket:bookmarkablePage=:com.wm.mobile.web.utils.GetDirectionsLink&address=830+Curran+Hwy+Tba+1984,North+Adams,MA,01247&latitude=0.0&longitude=0.0">Directions</a>
+</td>
+</tr>
+<tr>
+<td>
+
+</td>
+</tr>
+</tbody></table>
+</div></div>
+<div>
+<div id="cachedResultPlaceHolder"></div>
+<div onclick="showProcessingImage(&#39;paginationMessageHolderTitle&#39;)">
+<div class="paginator" id="paginationMessageHolder" style="display:none;">
+<span id="paginationMessageHolderTitle">Sample Title</span>
+</div>
+</div>
+
+<div style="display:none;" id="cachedResults"></div>
+</div>
+<div class="line" style="padding-top: 5px;"></div>
+<div class="fis">
+<a href="http://mobile.walmart.com/m/searchfindinstore?product_id=21556265&lat=0.0&lon=0.0"><img border="0" src="./instore_instock_files/search_again.gif" alt="Search_Again"></a>
+</div>
+<div class="fis">
+Online and store prices may differ, and prices may vary from store to store.
+</div>
+<div class="fis" style="padding-bottom: 20px;">
+( In stock status is approximate and was last updated on <span>05/26/2013</span> at <span>10:08 AM</span> )
+</div>
+</div>
+
+<div style="font-size: 10px; padding-bottom: 10px; padding-top: 10px; padding-left:10px; background-color:none;">
+<div class="footer redesign">
+<div class="links">
+<a href="http://www.walmart.com/index.gsp">Full Site | </a>
+<a href="http://mobile.opinionlab.com/EyWaYVuF?referer=http%3A%2F%2Fmobile.walmart.com%2Fm%2Fsearchfindinstoreresults%3Fproduct_id%3D21556265%26lat%3D0.0%26lon%3D0.0%26zip%3D12180%26city%3D%26state%3D%26custom_var%3Dnull%7CL1%7C20.0" target="_blank">Feedback | </a>
+<a href="http://mobile.walmart.com/m/tos?host=ns31&">Terms of use</a>
+
+</div>
+<div class="copyright">©&nbsp;2012 Walmart Stores</div>
+</div>
+</div>
+</div>
+
+
+<div id="sbi_camera_button" class="sbi_search" style="left:0px;top:0px;position:absolute;width:29px;height:27px;border:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;z-index:2147483647;display:none;"></div></body></html>
