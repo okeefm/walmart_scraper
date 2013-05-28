@@ -96,3 +96,16 @@ File.open('/home/okeefm/code/walmart_scraper/stock_settings.txt', 'w') do |file|
 	Marshal.dump(stock, file)
 end
 
+#heartbeat email
+if (time.min == 0)
+	mail = Mail.new do
+		from "okeefm57@gmail.com"
+		to "mikeco57@gmail.com"
+		subject "[walmart_bot] is alive"
+		body "The cron job running walmart_bot is alive, as of " + time.strftime("%H:%M:%S")
+	end
+	
+	mail.charset = 'utf-8'
+	mail.deliver
+end
+
