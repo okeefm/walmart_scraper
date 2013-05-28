@@ -97,7 +97,7 @@ File.open('/home/okeefm/code/walmart_scraper/stock_settings.txt', 'w') do |file|
 end
 
 #heartbeat email
-if (time.min == 0)
+#if (time.min == 0)
 	mail = Mail.new do
 		from "okeefm57@gmail.com"
 		to "mikeco57@gmail.com"
@@ -107,5 +107,5 @@ if (time.min == 0)
 	
 	mail.charset = 'utf-8'
 	mail.deliver
-end
+#end
 
